@@ -1,0 +1,30 @@
+{
+  "name": "learn_fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "nodejsnodejs"
+  ],
+  "homepage": "https://github.com/VanHauCodeG/first_nodejs#readme",
+  "bugs": {
+    "url": "https://github.com/VanHauCodeG/first_nodejs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanHauCodeG/first_nodejs.git"
+  },
+  "license": "ISC",
+  "author": "henry",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "projejct"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
