@@ -19,6 +19,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon --inspect src/index.js",
+    "build:css": "sass src/resource/scss/app.scss src/public/css/style.css --style=compressed",
+    "watch:css": "sass --watch src/resource/scss/app.scss src/public/css/style.css",
     "test": "projejct"
   },
   "dependencies": {
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "morgan": "^1.12.0",
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "sass": "^1.104.0"
   }
 }

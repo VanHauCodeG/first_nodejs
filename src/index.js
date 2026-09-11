@@ -5,7 +5,9 @@ const { engine } = require('express-handlebars');
 const app = express();
 const port = 3000;
 
-//HTTPP log
+app.use(express.static(path.join(__dirname, 'public')));
+
+//HTTP log
 app.use(morgan('combined'))
 
 //Template engine Hadlebars 
@@ -25,6 +27,7 @@ app.get('/news', (req, res) => {
   res.render('news');
 });
 
+//Status
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
