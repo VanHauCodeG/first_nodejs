@@ -6,9 +6,9 @@ const app = express();
 const port = 3000;
 
 const route = require('./routes');
-const db = require('./config/db');db
+const db = require('./config/db');
 
-//connect to db
+//Connect to db
 db.connect();
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -24,12 +24,12 @@ app.engine('hbs', engine({
   extname: '.hbs'
 })); 
 app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, 'resource/views'));
+app.set('views', path.join(__dirname, 'resource','views'));
 
 //Routes init 
 route(app);
 
 //Status
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`App listening on port ${port}`);
 });
