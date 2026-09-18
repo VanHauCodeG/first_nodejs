@@ -26,7 +26,8 @@
   "dependencies": {
     "express": "^5.2.1",
     "express-handlebars": "^9.0.1",
-    "mongoose": "^9.10.1"
+    "mongoose": "^9.10.1",
+    "mongoose-slug-updater": "^3.3.0"
   },
   "devDependencies": {
     "husky": "^9.1.7",

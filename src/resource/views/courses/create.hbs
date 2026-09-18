@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Tạo mới dữ liệu</h2>
+  <form action="/courses/store" method="POST">
+    
+    <!-- Trường Name -->
+    <div class="mb-3">
+      <label for="name" class="form-label">Tên (name)</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên..." required>
+    </div>
+
+    <!-- Trường Description -->
+    <div class="mb-3">
+      <label for="description" class="form-label">Mô tả (description)</label>
+      <textarea class="form-control" id="description" name="description" rows="3" placeholder="Nhập mô tả..."></textarea>
+    </div>
+
+    <!-- Trường Img -->
+    <div class="mb-3">
+      <label for="img" class="form-label">Đường dẫn ảnh (img)</label>
+      <input type="text" class="form-control" id="img" name="img" placeholder="https://example.com/image.jpg">
+    </div>
+    
+    <!-- Trường Video ID -->
+    <div class="mb-3">
+      <label for="videoId" class="form-label">Video ID</label>
+      <input type="text" class="form-control" id="videoId" name="videoId" placeholder="Nhập ID video YouTube/vimeo...">
+    </div>
+
+    <!-- Nút Submit -->
+    <button type="submit" class="btn btn-primary">Thêm mới</button>
+  </form>
+</div>
