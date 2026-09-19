@@ -8,44 +8,44 @@
 
           <!-- Header -->
           <div class="d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom">
-            <h3 class="fw-bold mb-0 text-primary">Tạo mới khóa học</h3>
+            <h3 class="fw-bold mb-0 text-primary">Sửa khóa học</h3>
             <a href="/me/stored/courses" class="btn btn-outline-secondary btn-sm">
               &larr; Quay lại
             </a>
           </div>
 
-          <!-- Form tạo mới -->
-          <form action="/courses/store" method="POST">
+          <!-- Form cập nhật -->
+          <form action="/courses/{{course._id}}?_method=PUT" method="POST">
 
             <!-- Tên khóa học -->
             <div class="mb-3">
               <label for="name" class="form-label fw-semibold">Tên khóa học</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên khóa học..." required>
+              <input type="text" class="form-control" id="name" value="{{course.name}}" name="name" placeholder="Nhập tên khóa học..." required>
             </div>
 
             <!-- Mô tả -->
             <div class="mb-3">
               <label for="description" class="form-label fw-semibold">Mô tả</label>
-              <textarea class="form-control" id="description" name="description" rows="4" placeholder="Nhập mô tả ngắn gọn về khóa học..."></textarea>
+              <textarea class="form-control" id="description" name="description" rows="4" placeholder="Nhập mô tả chi tiết...">{{course.description}}</textarea>
             </div>
 
             <!-- Chia 2 cột cho Ảnh và Video ID -->
             <div class="row g-3 mb-4">
               <div class="col-md-6">
                 <label for="img" class="form-label fw-semibold">Đường dẫn ảnh (URL)</label>
-                <input type="text" class="form-control" id="img" name="img" placeholder="https://example.com/image.jpg">
+                <input type="text" class="form-control" id="img" value="{{course.img}}" name="img" placeholder="https://example.com/image.jpg">
               </div>
 
               <div class="col-md-6">
                 <label for="videoId" class="form-label fw-semibold">Video ID</label>
-                <input type="text" class="form-control" id="videoId" name="videoId" placeholder="Nhập ID video YouTube...">
+                <input type="text" class="form-control" id="videoId" value="{{course.videoId}}" name="videoId" placeholder="Nhập ID video YouTube...">
               </div>
             </div>
 
             <!-- Nút hành động -->
             <div class="d-flex justify-content-end gap-2 pt-3 border-top">
               <a href="/me/stored/courses" class="btn btn-light border px-4">Hủy bỏ</a>
-              <button type="submit" class="btn btn-success px-4 fw-semibold">+ Thêm mới</button>
+              <button type="submit" class="btn btn-primary px-4 fw-semibold">Lưu thay đổi</button>
             </div>
 
           </form>

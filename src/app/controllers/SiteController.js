@@ -1,12 +1,12 @@
 const Course = require ('../models/Courses');
-const {mutipleMongooseToObject} = require('../../util/mongoose')
+const {multipleMongooseToObject} = require('../../util/mongoose')
 class SiteControllers{
     // [GET] /
     index(req, res, next) {
         Course.find({})
         .then(courses => {
             res.render('home',{
-                courses: mutipleMongooseToObject(courses)
+                courses: multipleMongooseToObject(courses)
             })
         })
 

@@ -1,0 +1,57 @@
+<div class="container my-5">
+  <div class="card shadow-sm border-0 rounded-3">
+    <div class="card-body p-4">
+
+      <!-- Header & Nút thêm mới -->
+      <div class="d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom">
+        <div>
+          <h3 class="fw-bold mb-1 text-primary">Khóa học của tôi</h3>
+          <p class="text-muted small mb-0">Quản lý danh sách các khóa học đã đăng</p>
+        </div>
+        <a href="/courses/create" class="btn btn-primary btn-sm px-3 fw-semibold">
+          + Thêm khóa học
+        </a>
+      </div>
+
+      <!-- Bảng dữ liệu (Có bọc responsive) -->
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th scope="col" class="text-center" style="width: 60px;">#</th>
+              <th scope="col" style="min-width: 180px;">Tên khóa học</th>
+              <th scope="col" style="max-width: 300px;">Mô tả</th>
+              <th scope="col">Slug</th>
+              <th scope="col" class="text-end" style="min-width: 140px;">Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each courses}}
+            <tr>
+              <th scope="row" class="text-center text-secondary fw-normal">{{sum @index 1}}</th>
+              <td class="fw-semibold text-dark">{{this.name}}</td>
+              <td class="text-secondary text-truncate" style="max-width: 300px;">{{this.description}}</td>
+              <td>
+                <span class="badge bg-light text-secondary border font-monospace">{{this.slug}}</span>
+              </td>
+              <td class="text-end">
+                <a href="/courses/{{this._id}}/edit" class="btn btn-outline-primary btn-sm me-1">Sửa</a>
+                <a href="" class="btn btn-outline-danger btn-sm" data-id="{{this._id}}">Xóa</a>
+              </td>
+            </tr>
+            {{else}}
+            <!-- Hiển thị khi danh sách trống -->
+            <tr>
+              <td colspan="5" class="text-center py-5 text-muted">
+                <p class="mb-2">Bạn chưa đăng khóa học nào.</p>
+                <a href="/courses/create" class="btn btn-sm btn-outline-primary">Đăng khóa học ngay</a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
