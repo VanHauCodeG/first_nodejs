@@ -21,7 +21,8 @@
     "start": "nodemon --inspect src/index.js",
     "build:css": "sass src/resource/scss/app.scss src/public/css/style.css --style=compressed",
     "watch:css": "sass --watch src/resource/scss/app.scss src/public/css/style.css",
-    "test": "projejct"
+    "test": "projejct",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "express": "^5.2.1",
@@ -35,7 +36,7 @@
     "lint-staged": "^17.5.1",
     "morgan": "^1.12.0",
     "nodemon": "^3.1.14",
-    "prettier": "^3.9.6",
+    "prettier": "3.9.8",
     "sass": "^1.104.0"
   }
 }

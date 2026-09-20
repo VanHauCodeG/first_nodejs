@@ -1,7 +1,7 @@
 const path = require('path');
-const morgan = require('morgan')
-const express = require('express')
-const { engine } = require('express-handlebars'); 
+const morgan = require('morgan');
+const express = require('express');
+const { engine } = require('express-handlebars');
 const methodOverride = require('method-override');
 
 const app = express();
@@ -19,21 +19,24 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //HTTP log
-app.use(morgan('combined'))
+app.use(morgan('combined'));
 
-//Template engine Hadlebars 
-app.engine('hbs', engine({
-  extname: '.hbs',
-  helpers: {
-    sum: (a, b) => a + b,
-  }
-})); 
-app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, 'resource','views'));
+//Template engine Hadlebars
+app.engine(
+  'hbs',
+  engine({
+    extname: '.hbs',
+    helpers: {
+      sum: (a, b) => a + b,
+    },
+  })
+);
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'resource', 'views'));
 
 app.use(methodOverride('_method'));
 
-//Routes init 
+//Routes init
 route(app);
 
 //Status

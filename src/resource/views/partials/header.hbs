@@ -1,51 +1,86 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-  <div class="container">
-    
+<nav class='navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm'>
+  <div class='container'>
+
     <!-- Logo / Brand -->
-    <a class="navbar-brand d-flex align-items-center fw-bold fs-4 text-white" href="/">
-      <i class="bi bi-mortarboard-fill text-primary me-2 fs-3"></i>
+    <a
+      class='navbar-brand d-flex align-items-center fw-bold fs-4 text-white'
+      href='/'
+    >
+      <i class='bi bi-mortarboard-fill text-primary me-2 fs-3'></i>
       <span>EduApp</span>
     </a>
 
     <!-- Nút Menu Mobile -->
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button
+      class='navbar-toggler border-0'
+      type='button'
+      data-bs-toggle='collapse'
+      data-bs-target='#navbarSupportedContent'
+      aria-controls='navbarSupportedContent'
+      aria-expanded='false'
+      aria-label='Toggle navigation'
+    >
+      <span class='navbar-toggler-icon'></span>
     </button>
 
     <!-- Nội dung Navbar -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+
       <!-- Danh mục bên trái -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Trang chủ</a>
+      <ul class='navbar-nav me-auto mb-2 mb-lg-0 fw-medium'>
+        <li class='nav-item'>
+          <a class='nav-link active' aria-current='page' href='/'>Trang chủ</a>
         </li>
       </ul>
 
       <!-- Menu quản lý người dùng góc phải -->
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle d-flex align-items-center text-white fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://avatar.iran.liara.run/public/boy" alt="User Avatar" class="rounded-circle me-2 border border-2 border-primary" width="32" height="32">
+      <ul class='navbar-nav ms-auto align-items-lg-center'>
+        <li class='nav-item dropdown'>
+          <a
+            class='nav-link dropdown-toggle d-flex align-items-center text-white fw-semibold'
+            href='#'
+            role='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            <img
+              src='/img/logo'
+              alt='User Avatar'
+              class='rounded-circle me-2 border border-2 border-primary'
+              width='32'
+              height='32'
+            />
             <span>Henry</span>
           </a>
-          
-          <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+
+          <ul class='dropdown-menu dropdown-menu-end shadow border-0 mt-2'>
             <li>
-              <a class="dropdown-item py-2 d-flex align-items-center" href="/courses/create">
-                <i class="bi bi-plus-circle text-primary me-2 fs-5"></i> Đăng khóa học
+              <a
+                class='dropdown-item py-2 d-flex align-items-center'
+                href='/courses/create'
+              >
+                <i class='bi bi-plus-circle text-primary me-2 fs-5'></i>
+                Đăng khóa học
               </a>
             </li>
-            <li><hr class="dropdown-divider"></li>
+            <li><hr class='dropdown-divider' /></li>
             <li>
-              <a class="dropdown-item py-2 d-flex align-items-center" href="/me/stored/courses">
-                <i class="bi bi-journal-bookmark text-secondary me-2 fs-5"></i> Khóa học của tôi
+              <a
+                class='dropdown-item py-2 d-flex align-items-center'
+                href='/me/stored/courses'
+              >
+                <i class='bi bi-journal-bookmark text-secondary me-2 fs-5'></i>
+                Khóa học của tôi
               </a>
             </li>
-            <li><hr class="dropdown-divider"></li>
+            <li><hr class='dropdown-divider' /></li>
             <li>
-              <a class="dropdown-item py-2 text-danger d-flex align-items-center" href="/logout">
-                <i class="bi bi-box-arrow-right me-2 fs-5"></i> Đăng xuất
+              <a
+                class='dropdown-item py-2 text-danger d-flex align-items-center'
+                href='/logout'
+              >
+                <i class='bi bi-box-arrow-right me-2 fs-5'></i>
+                Đăng xuất
               </a>
             </li>
           </ul>

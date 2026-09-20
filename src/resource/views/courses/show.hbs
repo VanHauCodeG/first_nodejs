@@ -1,38 +1,39 @@
-<div class="container my-4">
-  <div class="row g-4">
+<div class='container my-4'>
+  <div class='row g-4'>
     <!-- Sidebar Left -->
-    <aside class="col-12 col-md-4 col-lg-3">
-      <div class="card border-0 shadow-sm sticky-top" style="top: 20px;">
-        <img 
-          src="{{course.img}}" 
-          class="card-img-top img-fluid rounded" 
-          alt="{{course.name}}"
-        >
-        <div class="card-body">
-          <h5 class="card-title h6 text-muted mb-2">Thông tin khóa học</h5>
+    <aside class='col-12 col-md-4 col-lg-3'>
+      <div class='card border-0 shadow-sm sticky-top' style='top: 20px;'>
+        <img
+          src='{{course.img}}'
+          class='card-img-top img-fluid rounded'
+          alt='{{course.name}}'
+        />
+        <div class='card-body'>
+          <h5 class='card-title h6 text-muted mb-2'>Thông tin khóa học</h5>
           <!-- Bạn có thể thêm các thông tin phụ như giảng viên, giá, nút đăng ký tại đây -->
         </div>
       </div>
     </aside>
 
     <!-- Main Content Right -->
-    <main class="col-12 col-md-8 col-lg-9">
-      <div class="card border-0 shadow-sm p-4">
+    <main class='col-12 col-md-8 col-lg-9'>
+      <div class='card border-0 shadow-sm p-4'>
         <!-- Tên khóa học -->
-        <h1 class="h2 fw-bold text-dark mb-3">{{course.name}}</h1>
+        <h1 class='h2 fw-bold text-dark mb-3'>{{course.name}}</h1>
 
         <!-- Video YouTube Responsive -->
-        <div class="ratio ratio-16x9 mb-4 rounded overflow-hidden shadow-sm">
-          <iframe 
-            src="https://www.youtube.com/embed/{{course.videoId}}" 
-            title="{{course.name}}" 
+        <div class='ratio ratio-16x9 mb-4 rounded overflow-hidden shadow-sm'>
+          <iframe
+            src='https://www.youtube.com/embed/{{course.videoId}}'
+            title='{{course.name}}'
             allowfullscreen
           ></iframe>
         </div>
 
         <!-- Mô tả khóa học -->
-        <div class="course-description text-secondary lh-lg">
-          <h2 class="h5 text-dark fw-bold border-bottom pb-2 mb-3">Mô tả khóa học</h2>
+        <div class='course-description text-secondary lh-lg'>
+          <h2 class='h5 text-dark fw-bold border-bottom pb-2 mb-3'>Mô tả khóa
+            học</h2>
           {{course.description}}
         </div>
       </div>
